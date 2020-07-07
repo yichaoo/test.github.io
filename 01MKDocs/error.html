@@ -457,33 +457,7 @@
                 <div class="highlight"><pre><span></span><code>docker run -it -p <span class="m">9004</span>:8000 --name demo-mkdown9004 --rm  -v <span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>:/docs squidfunk/mkdocs-material
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>INFO    -  Building documentation...
-WARNING -  Config value: <span class="s1">&#39;plugins&#39;</span>. Warning: <span class="o">(</span><span class="s1">&#39;allback_to_build_date&#39;</span>, <span class="s1">&#39;Unrecognised configuration name: allback_to_build_date&#39;</span><span class="o">)</span>
-WARNING -  Config value: <span class="s1">&#39;dev_addr&#39;</span>. Warning: The use of the IP address <span class="s1">&#39;0.0.0.0&#39;</span> suggests a production environment or the use of a proxy to connect to the MkDocs server. However, the MkDocs<span class="s1">&#39; server is intended for local development purposes only. Please use a third party production-ready server instead.</span>
-<span class="s1">Traceback (most recent call last):</span>
-<span class="s1">  File &quot;/usr/local/bin/mkdocs&quot;, line 8, in &lt;module&gt;</span>
-<span class="s1">    sys.exit(cli())</span>
-<span class="s1">  File &quot;/usr/local/lib/python3.8/site-packages/click/core.py&quot;, line 829, in __call__</span>
-<span class="s1">    return self.main(*args, **kwargs)</span>
-<span class="s1">  File &quot;/usr/local/lib/python3.8/site-packages/click/core.py&quot;, line 782, in main</span>
-<span class="s1">    rv = self.invoke(ctx)</span>
-<span class="s1">  File &quot;/usr/local/lib/python3.8/site-packages/click/core.py&quot;, line 1259, in invoke</span>
-<span class="s1">    return _process_result(sub_ctx.command.invoke(sub_ctx))</span>
-<span class="s1">  File &quot;/usr/local/lib/python3.8/site-packages/click/core.py&quot;, line 1066, in invoke</span>
-<span class="s1">    return ctx.invoke(self.callback, **ctx.params)</span>
-<span class="s1">  File &quot;/usr/local/lib/python3.8/site-packages/click/core.py&quot;, line 610, in invoke</span>
-<span class="s1">    return callback(*args, **kwargs)</span>
-<span class="s1">  File &quot;/usr/local/lib/python3.8/site-packages/mkdocs/__main__.py&quot;, line 133, in serve_command</span>
-<span class="s1">    serve.serve(</span>
-<span class="s1">  File &quot;/usr/local/lib/python3.8/site-packages/mkdocs/commands/serve.py&quot;, line 141, in serve</span>
-<span class="s1">    config = builder()</span>
-<span class="s1">  File &quot;/usr/local/lib/python3.8/site-packages/mkdocs/commands/serve.py&quot;, line 136, in builder</span>
-<span class="s1">    build(config, live_server=live_server, dirty=dirty)</span>
-<span class="s1">  File &quot;/usr/local/lib/python3.8/site-packages/mkdocs/commands/build.py&quot;, line 236, in build</span>
-<span class="s1">    config = config[&#39;</span>plugins<span class="s1">&#39;].run_event(&#39;</span>config<span class="err">&#39;</span>, config<span class="o">)</span>
-  File <span class="s2">&quot;/usr/local/lib/python3.8/site-packages/mkdocs/plugins.py&quot;</span>, line <span class="m">94</span>, in run_event
-    <span class="nv">result</span> <span class="o">=</span> method<span class="o">(</span>item, **kwargs<span class="o">)</span>
-  File <span class="s2">&quot;/usr/local/lib/python3.8/site-packages/mkdocs_git_revision_date_localized_plugin/plugin.py&quot;</span>, line <span class="m">36</span>, in on_config
+<div class="highlight"><pre><span></span><code>  File <span class="s2">&quot;/usr/local/lib/python3.8/site-packages/mkdocs_git_revision_date_localized_plugin/plugin.py&quot;</span>, line <span class="m">36</span>, in on_config
     self.util <span class="o">=</span> Util<span class="o">(</span><span class="nv">path</span><span class="o">=</span>config<span class="o">[</span><span class="s2">&quot;docs_dir&quot;</span><span class="o">])</span>
   File <span class="s2">&quot;/usr/local/lib/python3.8/site-packages/mkdocs_git_revision_date_localized_plugin/util.py&quot;</span>, line <span class="m">14</span>, in __init__
     <span class="nv">git_repo</span> <span class="o">=</span> Repo<span class="o">(</span>path, <span class="nv">search_parent_directories</span><span class="o">=</span>True<span class="o">)</span>
