@@ -1,0 +1,65 @@
+site_name: MorkDown速查手册
+site_description: MorkDown和MKDoc相关说明文档和示例
+site_author: Liu Yichao
+
+use_directory_urls: false
+
+# Copyright
+copyright: Copyright &copy; 2016 - 2020 LYC
+
+# Configuration
+theme:
+  name: material
+  language: zh
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    # - instant
+    - tabs
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  # - pymdownx.caret
+  # - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yichaoo
+    - icon: fontawesome/brands/qq
+      link: https://github.com/yichaoo
+    - icon: fontawesome/brands/weixin
+      link: https://github.com/yichaoo
+
+plugins:
+  - search # necessary for search to work
+  - awesome-pages
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
